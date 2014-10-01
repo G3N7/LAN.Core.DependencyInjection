@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAN.Core.DependencyInjection", "LAN.Core.DependencyInjection\LAN.Core.DependencyInjection.csproj", "{2E4667BE-A1A2-405B-B331-DFDA2EA90195}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAN.Core.DependencyInjection.SimpleInjector", "LAN.Core.DependencyInjection.SimpleInjector\LAN.Core.DependencyInjection.SimpleInjector.csproj", "{51E48AAE-2CAA-45E2-8014-04C1CBB90E76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B9233A16-9BD4-4EF6-9B40-2B4B2E1888FD}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E4667BE-A1A2-405B-B331-DFDA2EA90195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E4667BE-A1A2-405B-B331-DFDA2EA90195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E4667BE-A1A2-405B-B331-DFDA2EA90195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E4667BE-A1A2-405B-B331-DFDA2EA90195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51E48AAE-2CAA-45E2-8014-04C1CBB90E76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51E48AAE-2CAA-45E2-8014-04C1CBB90E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51E48AAE-2CAA-45E2-8014-04C1CBB90E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51E48AAE-2CAA-45E2-8014-04C1CBB90E76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
