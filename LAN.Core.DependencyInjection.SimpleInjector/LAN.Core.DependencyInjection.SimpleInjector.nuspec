@@ -10,7 +10,7 @@
 		<description>Dependancy Injection abstraction implemented with SimpleInjector</description>
 		<copyright>Copyright 2014</copyright>
 		<dependencies>
-			<dependency id="SimpleInjector" version="2.5.0" />
+			<dependency id="SimpleInjector" version="2.6.1" />
 			<dependency id="LAN.Core.DependencyInjection" />
 		</dependencies>
 	</metadata>
