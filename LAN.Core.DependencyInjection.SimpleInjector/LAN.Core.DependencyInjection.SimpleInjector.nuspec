@@ -1,17 +1,21 @@
 <?xml version="1.0"?>
 <package >
-	<metadata>
-		<id>$id$</id>
-		<version>$version$</version>
-		<title>$title$</title>
-		<authors>LAN</authors>
-		<owners>LAN</owners>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>Dependancy Injection abstraction implemented with SimpleInjector</description>
-		<copyright>Copyright 2014</copyright>
-		<dependencies>
-			<dependency id="SimpleInjector" version="2.6.1" />
-			<dependency id="LAN.Core.DependencyInjection" />
-		</dependencies>
-	</metadata>
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Mitch Ferrer</authors>
+    <owners>Mitch Ferrer</owners>
+    <licenseUrl>https://github.com/G3N7/LAN.Core.DependencyInjection/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/G3N7/LAN.Core.DependencyInjection</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Dependancy Injection abstraction implemented with SimpleInjector</description>
+    <copyright>Copyright 2014</copyright>
+    <dependencies>
+      <group>
+        <dependency id="SimpleInjector" version="2.6.1" />
+        <dependency id="LAN.Core.DependencyInjection" version="1.0.7.0" />
+      </group>
+    </dependencies>
+  </metadata>
 </package>
