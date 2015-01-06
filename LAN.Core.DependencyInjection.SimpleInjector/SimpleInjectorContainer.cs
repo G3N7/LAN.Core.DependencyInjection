@@ -65,5 +65,22 @@ namespace LAN.Core.DependencyInjection.SimpleInjector
 		{
 			this._container.Register(() => singletonOfConcrete);
 		}
+
+		/// <summary>
+		/// Will verify the registration of all current dependencies.
+		/// </summary>
+		/// <returns></returns>
+		public RegistrationResult AreAllRequiredDependenciesRegistered()
+		{
+			try
+			{
+				this._container.Verify();
+				return new RegistrationResult("Success", false);
+			}
+			catch (InvalidOperationException ex)
+			{
+				return new RegistrationResult(ex.ToString(), true);
+			}
+		}
 	}
 }

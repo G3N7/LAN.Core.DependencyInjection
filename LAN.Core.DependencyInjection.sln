@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAN.Core.DependencyInjection", "LAN.Core.DependencyInjection\LAN.Core.DependencyInjection.csproj", "{2E4667BE-A1A2-405B-B331-DFDA2EA90195}"
 EndProject
@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAN.Core.DependencyInjection.Tests", "LAN.Core.DependencyInjection.Tests\LAN.Core.DependencyInjection.Tests.csproj", "{0F05F46D-FF7F-496C-A586-ADD97D276933}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{51E48AAE-2CAA-45E2-8014-04C1CBB90E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51E48AAE-2CAA-45E2-8014-04C1CBB90E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51E48AAE-2CAA-45E2-8014-04C1CBB90E76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F05F46D-FF7F-496C-A586-ADD97D276933}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F05F46D-FF7F-496C-A586-ADD97D276933}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F05F46D-FF7F-496C-A586-ADD97D276933}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F05F46D-FF7F-496C-A586-ADD97D276933}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
