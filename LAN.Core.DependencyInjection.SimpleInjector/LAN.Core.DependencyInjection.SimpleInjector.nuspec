@@ -11,11 +11,5 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Dependency Injection abstraction implemented with SimpleInjector</description>
     <copyright>Copyright 2014</copyright>
-    <dependencies>
-      <group>
-        <dependency id="SimpleInjector" version="2.6.1" />
-        <dependency id="LAN.Core.DependencyInjection" version="1.1.1.0" />
-      </group>
-    </dependencies>
   </metadata>
 </package>
