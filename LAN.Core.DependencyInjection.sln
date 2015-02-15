@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAN.Core.DependencyInjectio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAN.Core.DependencyInjection.Ninject", "LAN.Core.DependencyInjection.Ninject\LAN.Core.DependencyInjection.Ninject.csproj", "{7AE61F63-5491-4A70-904F-974D8E854B99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAN.Core.DependencyInjection.StructureMap", "LAN.Core.DependencyInjection.StructureMap\LAN.Core.DependencyInjection.StructureMap.csproj", "{27FEC7E9-405A-4E29-B2E2-94F034F8A98F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{7AE61F63-5491-4A70-904F-974D8E854B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AE61F63-5491-4A70-904F-974D8E854B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AE61F63-5491-4A70-904F-974D8E854B99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27FEC7E9-405A-4E29-B2E2-94F034F8A98F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27FEC7E9-405A-4E29-B2E2-94F034F8A98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27FEC7E9-405A-4E29-B2E2-94F034F8A98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27FEC7E9-405A-4E29-B2E2-94F034F8A98F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
