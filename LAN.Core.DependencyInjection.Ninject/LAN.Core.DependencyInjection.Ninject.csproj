@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0F05F46D-FF7F-496C-A586-ADD97D276933}</ProjectGuid>
+    <ProjectGuid>{7AE61F63-5491-4A70-904F-974D8E854B99}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LAN.Core.DependencyInjection.Tests</RootNamespace>
-    <AssemblyName>LAN.Core.DependencyInjection.Tests</AssemblyName>
+    <RootNamespace>LAN.Core.DependencyInjection.Ninject</RootNamespace>
+    <AssemblyName>LAN.Core.DependencyInjection.Ninject</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -35,17 +35,6 @@
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="SimpleInjector, Version=2.7.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SimpleInjector.2.7.2\lib\net45\SimpleInjector.dll</HintPath>
-    </Reference>
-    <Reference Include="SimpleInjector.Diagnostics, Version=2.7.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SimpleInjector.2.7.2\lib\net45\SimpleInjector.Diagnostics.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,28 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NinjectContainerTests.cs" />
-    <Compile Include="RegistrationResultTests.cs" />
+    <Compile Include="NinjectContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BaseContainerTests.cs" />
-    <Compile Include="SimpleInjectorContainerTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LAN.Core.DependencyInjection\LAN.Core.DependencyInjection.csproj">
+      <Project>{2e4667be-a1a2-405b-b331-dfda2ea90195}</Project>
+      <Name>LAN.Core.DependencyInjection</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LAN.Core.DependencyInjection.Ninject\LAN.Core.DependencyInjection.Ninject.csproj">
-      <Project>{7AE61F63-5491-4A70-904F-974D8E854B99}</Project>
-      <Name>LAN.Core.DependencyInjection.Ninject</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LAN.Core.DependencyInjection.SimpleInjector\LAN.Core.DependencyInjection.SimpleInjector.csproj">
-      <Project>{51e48aae-2caa-45e2-8014-04c1cbb90e76}</Project>
-      <Name>LAN.Core.DependencyInjection.SimpleInjector</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LAN.Core.DependencyInjection\LAN.Core.DependencyInjection.csproj">
-      <Project>{2E4667BE-A1A2-405B-B331-DFDA2EA90195}</Project>
-      <Name>LAN.Core.DependencyInjection</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

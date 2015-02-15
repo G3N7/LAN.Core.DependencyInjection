@@ -1,18 +1,18 @@
-﻿using LAN.Core.DependencyInjection.SimpleInjector;
 using NUnit.Framework;
-using SimpleInjector;
 
-namespace LAN.Core.DependencyInjection.Tests.SimpleInjector
+namespace LAN.Core.DependencyInjection.Tests
 {
-	public class SimpleInjectorContainerTests
+	public abstract class BaseContainerTests<TContainer> where TContainer : IContainer
 	{
-		private SimpleInjectorContainer _container;
+		private TContainer _container;
 
 		[SetUp]
 		public void Setup()
 		{
-			_container = new SimpleInjectorContainer(new Container());
+			_container = this.CreateContainer();
 		}
+
+		protected abstract TContainer CreateContainer();
 
 		[Test]
 		public void RegisterByTypeCanBeRetrieved()
