@@ -58,7 +58,7 @@
     <Compile Include="NinjectContainerTests.cs" />
     <Compile Include="RegistrationResultTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BaseContainerTests.cs" />
+    <Compile Include="ContainersMustSatisfy.cs" />
     <Compile Include="SimpleInjectorContainerTests.cs" />
   </ItemGroup>
   <ItemGroup>

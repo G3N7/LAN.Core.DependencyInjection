@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace LAN.Core.DependencyInjection.Tests
 {
-	public abstract class BaseContainerTests<TContainer> where TContainer : IContainer
+	public abstract class ContainersMustSatisfy<TContainer> where TContainer : IContainer
 	{
 		private TContainer _container;
 
@@ -60,6 +60,15 @@ namespace LAN.Core.DependencyInjection.Tests
 
 			if (instance == null) throw new InconclusiveException("Instance could not be instantiated");
 			Assert.That(ExampleType.InstantiationCount, Is.EqualTo(countBeforeTest + 2));
+		}
+
+		[Test]
+		public void InstancesCanBeRetrievedByRuntimeType()
+		{
+			_container.Bind<ExampleType, ExampleType>(true);
+			var instance = _container.GetInstance(typeof(ExampleType));
+
+			Assert.That(instance, Is.Not.Null);
 		}
 
 		[Test]

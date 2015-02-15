@@ -3,7 +3,7 @@ using SimpleInjector;
 
 namespace LAN.Core.DependencyInjection.Tests
 {
-	public class SimpleInjectorContainerTests : BaseContainerTests<SimpleInjectorContainer>
+	public class SimpleInjectorContainerTests : ContainersMustSatisfy<SimpleInjectorContainer>
 	{
 		protected override SimpleInjectorContainer CreateContainer()
 		{
