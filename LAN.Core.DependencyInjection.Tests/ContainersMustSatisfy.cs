@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 
 namespace LAN.Core.DependencyInjection.Tests
@@ -5,11 +6,40 @@ namespace LAN.Core.DependencyInjection.Tests
 	public abstract class ContainersMustSatisfy<TContainer> where TContainer : IContainer
 	{
 		private TContainer _container;
+		private DateTime _startInitialization;
+		private DateTime _initializationComplete;
+		private DateTime _testComplete;
+		private DateTime _testFixtureRunStart;
+		private DateTime _testFixtureRunEnd;
+
+		[TestFixtureSetUp]
+		public void FixtureSetup()
+		{
+			_testFixtureRunStart = DateTime.Now;
+		}
+
+		[TestFixtureTearDown]
+		public void FixtureTearDown()
+		{
+			_testFixtureRunEnd = DateTime.Now;
+			Console.WriteLine("Full Test Run: {0}ms", _testFixtureRunEnd.Subtract(_testFixtureRunStart).TotalMilliseconds);
+		}
 
 		[SetUp]
 		public void Setup()
 		{
+			_startInitialization = DateTime.Now;
 			_container = this.CreateContainer();
+			_initializationComplete = DateTime.Now;
+		}
+
+		[TearDown]
+		public void TearDown()
+		{
+			_testComplete = DateTime.Now;
+
+			Console.WriteLine("Initialization Took: {0}ms", _initializationComplete.Subtract(_startInitialization).TotalMilliseconds);
+			Console.WriteLine("Test Run Time: {0}ms", _testComplete.Subtract(_initializationComplete).TotalMilliseconds);
 		}
 
 		protected abstract TContainer CreateContainer();
@@ -117,7 +147,7 @@ namespace LAN.Core.DependencyInjection.Tests
 
 		private interface IServiceDependency
 		{
-			 
+
 		}
 	}
 }
