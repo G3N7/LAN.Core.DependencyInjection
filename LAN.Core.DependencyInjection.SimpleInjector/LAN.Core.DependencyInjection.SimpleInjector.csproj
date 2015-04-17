@@ -61,7 +61,6 @@
   <ItemGroup>
     <None Include="key.snk" />
     <None Include="LAN.Core.DependencyInjection.SimpleInjector.nuspec" />
-    <None Include="PackageBuild.cmd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
