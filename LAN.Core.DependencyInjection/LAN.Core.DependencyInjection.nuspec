@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <package >
   <metadata>
     <id>$id$</id>
@@ -9,8 +9,8 @@
     <licenseUrl>https://raw.githubusercontent.com/G3N7/LAN.Core.DependencyInjection/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/G3N7/LAN.Core.DependencyInjection/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Thin Di Abstraction implemented with SimpleInjector</description>
+    <description>Thin Di Abstraction</description>
     <copyright>Copyright 2015</copyright>
-    <tags>DI DependencyInjection IOC InversionOfControl SimpleInjector</tags>
+    <tags>DI DependencyInjection IOC InversionOfControl</tags>    
   </metadata>
 </package>

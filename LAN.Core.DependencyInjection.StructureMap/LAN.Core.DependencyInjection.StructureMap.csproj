@@ -57,6 +57,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="LAN.Core.DependencyInjection.StructureMap.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
