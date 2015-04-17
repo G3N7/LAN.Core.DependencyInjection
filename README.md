@@ -3,9 +3,9 @@ LAN.Core.DependencyInjection
 
 Thin DI Abstraction with Implementations for:
 ---
-* StructureMap
-* SimpleInjector
-* Ninject
+* StructureMap - [Nuget](https://www.nuget.org/packages/LAN.Core.DependencyInjection.StructureMap/)
+* SimpleInjector - [Nuget](https://www.nuget.org/packages/LAN.Core.DependencyInjection.SimpleInjector/)
+* Ninject - [Nuget](https://www.nuget.org/packages/LAN.Core.DependencyInjection.Ninject/)
 
 Bind
 ---
