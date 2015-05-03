@@ -1,6 +1,8 @@
 @echo off
 
-@echo !! Rebuild in Release mode prior to running !!
+set /p apiKey=Enter API Key:%=%
+.nuget\nuget setApiKey %apiKey%
+
 .nuget\nuget pack LAN.Core.DependencyInjection\LAN.Core.DependencyInjection.csproj -IncludeReferencedProjects -ExcludeEmptyDirectories -Build -Symbols -Properties Configuration=Release
 @echo Finished Building: LAN.Core.DependencyInjection
 
@@ -17,5 +19,15 @@
 @echo Finished Building: LAN.Core.DependencyInjection.StructureMap
 
 @echo ---------------------------------------------------
-@echo !! Rebuild in Release mode prior to running !!
-pause
+
+@echo Pushing To Nuget and SymbolSource...
+set /p diVersion=Enter DependencyInjection Package Version:%=%
+.nuget\nuget push LAN.Core.DependencyInjection.%diVersion%.nupkg
+set /p diNinjectVersion=Enter Ninject Package Version:%=%
+.nuget\nuget push LAN.Core.DependencyInjection.Ninject.%diNinjectVersion%.nupkg
+set /p diSimpleInjectorVersion=Enter SimpleInjector Package Version:%=%
+.nuget\nuget push LAN.Core.DependencyInjection.SimpleInjector.%diSimpleInjectorVersion%.nupkg
+set /p diStructureMapVersion=Enter StructureMap Package Version:%=%
+.nuget\nuget push LAN.Core.DependencyInjection.StructureMap.%diStructureMapVersion%.nupkg
+
+@echo ---------------------------------------------------
