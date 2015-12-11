@@ -28,7 +28,7 @@ namespace LAN.Core.DependencyInjection.SimpleInjector
 		{
 			if (singleton)
 			{
-				_container.RegisterSingle<TAbstract, TConcrete>();
+				_container.RegisterSingleton<TAbstract, TConcrete>();
 			}
 			else
 			{
