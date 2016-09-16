@@ -4,10 +4,10 @@ solution: LAN.Core.DependencyInjection.sln
 install:
   - nuget restore LAN.Core.DependencyInjection.sln
   - nuget install NUnit.Runners -Version 3.2.1 -OutputDirectory testrunner
-  - bash build/patch_assembly_file_with_build_id.sh LAN.Core.DependencyInjection/Properties/AssemblyInfo.cs ${TRAVIS_BUILD_NUMBER}
-  - bash build/patch_assembly_file_with_build_id.sh LAN.Core.DependencyInjection.Ninject/Properties/AssemblyInfo.cs ${TRAVIS_BUILD_NUMBER}
-  - bash build/patch_assembly_file_with_build_id.sh LAN.Core.DependencyInjection.SimpleInjector/Properties/AssemblyInfo.cs ${TRAVIS_BUILD_NUMBER}
-  - bash build/patch_assembly_file_with_build_id.sh LAN.Core.DependencyInjection.StructureMap/Properties/AssemblyInfo.cs ${TRAVIS_BUILD_NUMBER}
+  - bash "$(curl -fsSL https://gist.githubusercontent.com/G3N7/d8c6c2b98e6c9ec36953d0341d8f5d9b/raw/17c83de0e005d905e1fc2cf6289f243d0890e622/patch_assembly_file_with_build_id.sh)" LAN.Core.DependencyInjection/Properties/AssemblyInfo.cs ${TRAVIS_BUILD_NUMBER}
+  - bash "$(curl -fsSL https://gist.githubusercontent.com/G3N7/d8c6c2b98e6c9ec36953d0341d8f5d9b/raw/17c83de0e005d905e1fc2cf6289f243d0890e622/patch_assembly_file_with_build_id.sh)" LAN.Core.DependencyInjection.Ninject/Properties/AssemblyInfo.cs ${TRAVIS_BUILD_NUMBER}
+  - bash "$(curl -fsSL https://gist.githubusercontent.com/G3N7/d8c6c2b98e6c9ec36953d0341d8f5d9b/raw/17c83de0e005d905e1fc2cf6289f243d0890e622/patch_assembly_file_with_build_id.sh)" LAN.Core.DependencyInjection.SimpleInjector/Properties/AssemblyInfo.cs ${TRAVIS_BUILD_NUMBER}
+  - bash "$(curl -fsSL https://gist.githubusercontent.com/G3N7/d8c6c2b98e6c9ec36953d0341d8f5d9b/raw/17c83de0e005d905e1fc2cf6289f243d0890e622/patch_assembly_file_with_build_id.sh)" LAN.Core.DependencyInjection.StructureMap/Properties/AssemblyInfo.cs ${TRAVIS_BUILD_NUMBER}
 
 script:
   - xbuild /p:Configuration=Release /p:TargetFrameworkVersion="v4.5" LAN.Core.DependencyInjection.sln
