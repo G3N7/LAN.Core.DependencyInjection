@@ -1,0 +1,16 @@
+language: csharp
+solution: LAN.Core.DependencyInjection.sln
+  
+install:
+  - nuget restore LAN.Core.DependencyInjection.sln
+  - nuget install NUnit.Runners -Version 3.2.1 -OutputDirectory testrunner
+  - bash build/patch_assembly_file_with_build_id.sh LAN.Core.DependencyInjection/Properties/AssemblyInfo.cs ${TRAVIS_BUILD_NUMBER}
+  - bash build/patch_assembly_file_with_build_id.sh LAN.Core.DependencyInjection.Ninject/Properties/AssemblyInfo.cs ${TRAVIS_BUILD_NUMBER}
+  - bash build/patch_assembly_file_with_build_id.sh LAN.Core.DependencyInjection.SimpleInjector/Properties/AssemblyInfo.cs ${TRAVIS_BUILD_NUMBER}
+  - bash build/patch_assembly_file_with_build_id.sh LAN.Core.DependencyInjection.StructureMap/Properties/AssemblyInfo.cs ${TRAVIS_BUILD_NUMBER}
+
+script:
+  - xbuild /p:Configuration=Release /p:TargetFrameworkVersion="v4.5" LAN.Core.DependencyInjection.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.2.1/tools/nunit3-console.exe ./LAN.Core.DependencyInjection.Tests/bin/Release/LAN.Core.DependencyInjection.Tests.dll
+  #- nuget pack ./LAN.Core.DependencyInjection/LAN.Core.DependencyInjection.csproj
+  
