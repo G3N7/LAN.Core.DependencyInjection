@@ -12,13 +12,13 @@ namespace LAN.Core.DependencyInjection.Tests
 		private DateTime _testFixtureRunStart;
 		private DateTime _testFixtureRunEnd;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void FixtureSetup()
 		{
 			_testFixtureRunStart = DateTime.Now;
 		}
 
-		[TestFixtureTearDown]
+		[OneTimeTearDown]
 		public void FixtureTearDown()
 		{
 			_testFixtureRunEnd = DateTime.Now;
